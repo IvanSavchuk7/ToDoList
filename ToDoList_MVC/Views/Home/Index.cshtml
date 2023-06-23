@@ -1,0 +1,27 @@
+﻿@using ToDoList_MVC.Models;
+@using System.Globalization;
+@model IndexViewModel
+
+@{
+    ViewData["Title"] = "Home";
+}
+
+
+<form class="input-container form-group" method="post" asp-action="Add" id="AddTaskMenu">
+    <input type="text" class="form-control" id="name" maxlength="50" required placeholder="Task title here..." asp-for=NewTask.Title />
+    <div class="input-inner">
+        <select class="form-control" asp-for=NewTask.CategoryId>
+            <option selected disabled hidden>Select Category</option>
+            @foreach (var category in Model.Categories)
+            {
+                <option value="@category.Id">@category.Name</option>
+            }
+        </select>
+
+        <input type="date" class="form-control" min="@DateTime.Now.ToString("yyyy-MM-dd")" id="DueDate" value="Due Date" asp-for=NewTask.DueDate />
+    </div>
+    <button type="submit" class="btn btn-outline-dark">ADD</button>
+</form>
+
+
+<partial name="_TaskTablePartial" model="@Model.TaskList">

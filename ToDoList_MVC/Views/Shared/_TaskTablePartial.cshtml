@@ -1,0 +1,64 @@
+﻿@using System.Globalization;
+@model IEnumerable<TaskViewModel>
+
+@if (Model == null || !Model.Any())
+{
+    <div class="text-center">
+        <h2>Seems like you have no active tasks</h2>
+    </div>
+}
+else
+{
+    <div class="text-center empty-tasks-block">
+
+        <div class="sort-container">
+            <ul class="sort-list">
+                <li>Sort by:</li>
+                <li><a href="@Url.Action("SortByDueDate", "Home", new { isDescending = false })">Ascending</a></li>
+                <li><a href="@Url.Action("SortByDueDate", "Home", new { isDescending = true })">Descending</a></li>
+            </ul>
+        </div>
+
+        <table class="table table-striped task-table">
+            <thead>
+                <tr>
+                    <th scope="col">TITLE</th>
+                    <th scope="col">START DATE</th>
+                    <th scope="col">DUE DATE</th>
+                    <th scope="col">CATEGORY</th>
+                    <th></th>
+                </tr>
+            </thead>
+            @{
+                <tbody>
+                    @foreach (var task in Model)
+                    {
+                        <tr class="task-table-row">
+                            <td><p>@task.Title</p></td>
+                            <td><p>@task.StartDate.ToString("D", DateTimeFormatInfo.InvariantInfo)</p></td>
+                            <td><p>@task.DueDate.ToString("D", DateTimeFormatInfo.InvariantInfo)</p></td>
+                            <td><p>@task.Category</p></td>
+                            <td>
+
+                                <div class="task-row-action">
+                                    @using (Html.BeginForm("Remove", "Home", new { id = task.Id }))
+                                    {
+                                        @Html.Hidden("id", task.Id)
+                                        <button type="submit" class="table-btn" data-toggle="tooltip" title="Remove task"><img src="~/images/table_del_icon.svg" class="img-shake"></button>
+                                    }
+
+                                    @using (Html.BeginForm("MarkAsDone", "Home", new { id = task.Id }))
+                                    {
+                                        @Html.Hidden("Id", task.Id)
+                                        <button type="submit" class="table-btn" data-toggle="tooltip" title="Mark as done"><img src="~/images/done_icon.svg"></button>
+                                    }
+
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            }
+        </table>
+    </div>
+}

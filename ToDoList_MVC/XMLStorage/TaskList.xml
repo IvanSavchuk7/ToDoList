@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Tasks>
+  <Task>
+    <Id>1</Id>
+    <Title>new xml task</Title>
+    <StartDate>2023-06-04T19:54:01.288859+03:00</StartDate>
+    <DueDate>2023-06-23T00:00:00</DueDate>
+    <IsActive>False</IsActive>
+    <CategoryId>2</CategoryId>
+  </Task>
+  <Task>
+    <Id>3</Id>
+    <Title>one more xml task</Title>
+    <StartDate>2023-06-08T15:09:53.8657749+03:00</StartDate>
+    <DueDate>2023-06-23T00:00:00</DueDate>
+    <IsActive>true</IsActive>
+    <CategoryId>3</CategoryId>
+  </Task>
+</Tasks>

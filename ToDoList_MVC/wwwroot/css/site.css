@@ -1,0 +1,275 @@
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 20px;
+}
+
+.navbar {
+    background-color: #f2f2f2;
+    padding-left: 1rem;
+}
+
+.text-center > a {
+    text-decoration: none;
+    color: black;
+}
+
+.actions-menu {
+    width: 30%;
+    margin: 40px auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.task-table tbody tr td {
+    text-align: center;
+}
+
+.task-table-row p {
+    margin: auto;
+    text-align: center;
+}
+
+.actions-menu a img,
+.img-shake {
+    display: block;
+    width: 40px;
+    height: 40px;
+}
+
+.task-row-action img {
+    display: block;
+    width: 20px;
+    height: 20px;
+}
+
+.empty-tasks-block {
+    margin-top: 15%;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.text-center {
+    margin-top: 5%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 60%;
+    margin: auto;
+}
+
+    form .input-inner {
+        display: inline-flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+.input-inner > * {
+    font-size: 16px;
+    margin-top: 5px;
+    width: 49.5%;
+}
+
+form > .form-control:first-child {
+    font-size: 20px;
+}
+
+.btn {
+    margin: 20px auto;
+    width: 50%;
+    border-color: #aab2b9;
+    background-color: #00000014;
+    font-weight: bold;
+}
+
+    .btn:hover {
+        transition: 0.7s;
+        font-weight: bold;
+        letter-spacing: 2px;
+        background-color: hsl(130, 63%, 40%);
+    }
+
+.table {
+    width: 70%;
+    margin: 10px auto;
+    text-align: center;
+}
+
+    .table td {
+        padding: 2rem;
+        text-align: center;
+        vertical-align: middle;
+    }
+
+        .table td > p {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+
+.task-row-action {
+    display: inline-flex;
+}
+
+.table td:nth-child(1) {
+    font-weight: bold;
+}
+
+.table td:nth-child(4) {
+    font-style: italic;
+}
+
+.img-shake:hover {
+    animation: shake 2s;
+    animation-iteration-count: infinite;
+}
+
+.table-btn {
+    border: none;
+    background: none;
+}
+
+@keyframes shake {
+    0% {
+        transform: translateX(3px) rotate(2deg);
+    }
+
+    10% {
+        transform: translateX(-3px) rotate(-2deg);
+    }
+
+    20% {
+        transform: translateX(3px) rotate(2deg);
+    }
+
+    30% {
+        transform: translateX(-3px) rotate(-2deg);
+    }
+
+    40% {
+        transform: translateX(3px) rotate(2deg);
+    }
+
+    50% {
+        transform: translateX(-3px) rotate(-2deg);
+    }
+
+    60% {
+        transform: translateX(3px) rotate(2deg);
+    }
+
+    70% {
+        transform: translateX(-3px) rotate(-2deg);
+    }
+
+    80% {
+        transform: translateX(3px) rotate(2deg);
+    }
+
+    90% {
+        transform: translateX(-3px) rotate(-2deg);
+    }
+
+    100% {
+        transform: translateX(3px) rotate(2deg);
+    }
+}
+
+
+.table-btn:active {
+    transform: translateY(-5px);
+}
+
+#AddTaskMenu {
+    display: none;
+}
+
+    #AddTaskMenu:target {
+        display: block;
+    }
+
+.sort-container {
+    display: flex;
+    justify-content: flex-end;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.sort-list {
+    display: inline-flex;
+    list-style: none;
+}
+
+    .sort-list > li {
+        margin: 10px;
+    }
+
+        .sort-list > li:not(:first-child) {
+            font-style: italic;
+        }
+
+    .sort-list li > a {
+        text-decoration: none;
+        color: black;
+        font-size: smaller;
+    }
+
+        .sort-list li > a:active,
+        .sort-list li > a:visited {
+            border-bottom: 1px solid black;
+        }
+
+
+li.dropdown {
+    display: inline-block;
+    float: right;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+    }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}

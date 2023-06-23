@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] TO DO List</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/ToDoList_WebApp.styles.css" asp-append-version="true" />
+    <link />
+</head>
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="#">TO DO LIST</a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class=" nav-item dropdown">
+                        <a href="#" class="dropbtn nav-link">Select Storage</a>
+                        <div class="dropdown-content">
+                            <a href="@Url.Action("SelectDataStorage", "Home", new { storageType = "MSSQL" })" class="nav-link">MS SQL</a>
+                            <a href="@Url.Action("SelectDataStorage", "Home", new { storageType = "XML" })" class="nav-link">XML</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="actions-menu">
+            <a class="navbar-brand" data-toggle="tooltip" title="Add task" href="#AddTaskMenu">
+                <img src="~/images/add_icon.svg" alt="Add" class="navbar-icon">
+            </a>
+
+            <a asp-controller="Home" asp-action="AddTask" class="navbar-brand">
+                <img src="~/images/edit_icon.svg" alt="Edit" class="navbar-icon" data-toggle="tooltip" title="Edit task">
+            </a>
+
+            <a asp-controller="Home" asp-action="RemoveTask" class="navbar-brand">
+                <img src="~/images/del_icon.svg" alt="Delete" class="navbar-icon" data-toggle="tooltip" title="Remove task">
+            </a>
+        </div>
+    </header>
+
+    <div class="container">
+        <main role="main" class="pb-3">
+
+            @RenderBody()
+        </main>
+    </div>
+
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

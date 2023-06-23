@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Tasks>
+  <Task>
+    <Id>6</Id>
+    <Title>NEW XML TASK</Title>
+    <StartDate>2023-04-27T18:26:18.1876347+03:00</StartDate>
+    <DueDate>2023-04-29T00:00:00</DueDate>
+    <IsActive>False</IsActive>
+    <CategoryId>4</CategoryId>
+  </Task>
+  <Task>
+    <Id>7</Id>
+    <Title>ANOTHER ONE XML STORAGE TASK</Title>
+    <StartDate>2023-04-27T21:39:18.6983993+03:00</StartDate>
+    <DueDate>2023-05-06T00:00:00</DueDate>
+    <IsActive>True</IsActive>
+    <CategoryId>1</CategoryId>
+  </Task>
+  <Task>
+    <Id>10</Id>
+    <Title>XML TASK 3</Title>
+    <StartDate>2023-05-02T16:46:32.8102213+03:00</StartDate>
+    <DueDate>2023-06-03T00:00:00</DueDate>
+    <IsActive>True</IsActive>
+    <CategoryId>3</CategoryId>
+  </Task>
+  <Task>
+    <Id>11</Id>
+    <Title>XML TASK 4</Title>
+    <StartDate>2023-05-03T18:36:32.927326+03:00</StartDate>
+    <DueDate>2023-05-27T00:00:00</DueDate>
+    <IsActive>True</IsActive>
+    <CategoryId>3</CategoryId>
+  </Task>
+  <Task>
+    <Id>12</Id>
+    <Title>ALtair web api task</Title>
+    <StartDate>2023-05-09T14:44:13.0864529+03:00</StartDate>
+    <DueDate>2023-06-03T00:00:00Z</DueDate>
+    <IsActive>true</IsActive>
+    <CategoryId>3</CategoryId>
+  </Task>
+</Tasks>
